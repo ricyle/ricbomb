@@ -860,12 +860,12 @@ def get_number():
     global clear
     while True:
         try:
-            number = int(input(f"""Telefon numarasını yazın. Şunun gibi: "54xxxxxxxx" (Sadece Türkiye numaralarında çalışır!)\n[?] : """))
+            number = int(input(f"""SMS göndermek istediğiniz kişinin telefon numarasını yazın. Şunun gibi: "54xxxxxxxx" (Sadece Türkiye numaralarında çalışır!)\n[?] : """))
             if len(str(number)) == 10 and str(number)[0] == "5":
                 return number
             else:
                 clear()
-                print(f"Numara Yanlış. Lütfen geçerli bir numara girin.")
+                print(f"Girdiğiniz Numara Yanlış. Lütfen geçerli bir numara girin.")
         except:
             clear()
             print(f"Lütfen bir numara yazın.")
@@ -901,7 +901,7 @@ def get_worker_amount():
 def restart():
     global clear
     while True:
-        question = input(f"Programdan çıkılsın mı?\n[Y/N] : ").upper().replace(" ", "")
+        question = input(f"Programdan çıkış yapılsın mı?\n[Y/N] : ").upper().replace(" ", "")
         if question == "Y":
             quit()
         elif question == "N":
